@@ -291,4 +291,4 @@ kata18.append(largestElement)
 
 
 
-    /// All contributing parties: Benjamin Scott, Justin Caudill, Sulaimon, Marshel Sendek
+    /// All contributing parties: Benjamin Scott, Justin Caudill, Sulaimon, Marshel Sendek, Elizabeth Johns
