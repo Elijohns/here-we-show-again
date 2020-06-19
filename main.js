@@ -88,6 +88,7 @@ for(let index = 1; index <=100; index ++) {
 
 // KATA 6
 
+
 let kata6 = document.createElement('div')
 let kataSixHeading = document.createElement('h3')
 kataSixHeading.append('kata 6')
@@ -109,7 +110,7 @@ let kataSevenHeading = document.createElement('h3')
 kataSevenHeading.append('kata 7')
 kata7.append(kataSevenHeading)
 kataList.append(kata7)
-for(let index = 20; index >=2; index -2) {
+for(let index = 20; index >=2; index -=2) {
     if(index === 2) {
         kata7.append(index)
      } else {
@@ -125,7 +126,7 @@ let kataEightHeading = document.createElement('h3')
 kataEightHeading.append('kata 8')
 kata8.append(kataEightHeading)
 kataList.append(kata8)
- for(let index = 19 ; index >=1; index --) {
+ for(let index = 19 ; index >=1; index -=2) {
       if(index === 1) {
        kata8.append(index)
      } else {
@@ -141,7 +142,7 @@ let kataNineHeading = document.createElement('h3')
 kataNineHeading.append('kata 9')
 kata9.append(kataNineHeading)
 kataList.append(kata9)
- for(let index = 100 ; index >=5; index --) {
+ for(let index = 100 ; index >=5; index -=5) {
       if(index === 5) {
        kata9.append(index)
      } else {
@@ -157,41 +158,40 @@ let kataTenHeading = document.createElement('h3')
 kataTenHeading.append('kata 10')
 kata10.append(kataTenHeading)
 kataList.append(kata10)
- for(let index = 100 ; index >=1; index --) {
-     const indexIsPerfectSquare = Number.isInteger(Math.sqrt(index))
-      if(indexIsPerfectSquare && index != 100) {
-       kata10.append(index)
-     } else {
-          kata10.append(index + ',')
-   
-     } }
+for(let index = 100; index >= 0; index --) {
+    const indexIsPerfectSquare = Number.isInteger(Math.sqrt(index))
+    if(indexIsPerfectSquare){
+        kata10.append(index + ' ')
+    }
+}
 
 
 // KATA 11
 
-let kata11  = document.createElement('div')
+let kata11 = document.createElement('div')
 let kataElevenHeading = document.createElement('h3')
 kataElevenHeading.append('kata 11')
 kata11.append(kataElevenHeading)
 kataList.append(kata11)
- for(let index = 0 ; index < sampleArray.lenghth; index ++) {
-       kata11.append(sampleArray[index] + '')
-     
-     } 
+for(let index = 0; index < sampleArray.length; index++){
+    kata11.append(sampleArray[index] + ' ')
+}
 
 
 // KATA 12
 
 let kata12 = document.createElement('div')
 let kataTwelveHeading = document.createElement('h3')
-kataTwelveHeading.append('kata 12')
+kataTwelveHeading.append('Kata 12')
 kata12.append(kataTwelveHeading)
 kataList.append(kata12)
- for(let index = 0 ; index < sampleArray.lenghth; index ++) {
-    kata12.append(sampleArray[index] % 2 === 0) 
-       kata12.append(sampleArray[index] + '')
-     
-     } 
+for(let index = 0; index < sampleArray.length; index++){
+    if(sampleArray[index] % 2 === 0){
+        kata12.append(sampleArray[index] + ' ')
+
+    }
+}
+
 
 
 
@@ -199,14 +199,14 @@ kataList.append(kata12)
 
 let kata13 = document.createElement('div')
 let kataThirteenHeading = document.createElement('h3')
-kataThirteenHeading.append('kata 13')
+kataThirteenHeading.append('Kata 13')
 kata13.append(kataThirteenHeading)
 kataList.append(kata13)
- for(let index = 0 ; index < sampleArray.lenghth; index ++) {
-       kata13.append(sampleArray[index] % 2 != 0) 
-           kata13.append(sampleArray[index] + '')
-       }
-      
+for(let index = 0; index < sampleArray.length; index++){
+    if(sampleArray[index] % 2 != 0){
+        kata13.append(sampleArray[index] + ' ')
+    }
+}
 
 
 
@@ -214,12 +214,12 @@ kataList.append(kata13)
 
 let kata14 = document.createElement('div')
 let kataFourteenHeading = document.createElement('h3')
-kataFourteenHeading.append('kata 14')
+kataFourteenHeading.append('Kata 14')
 kata14.append(kataFourteenHeading)
 kataList.append(kata14)
- for(let index = 0 ; index < sampleArray.lenghth; index ++) {
-       kata14.append(sampleArray[index] * sampleArray[index] + '') 
-       }
+for(let index = 0; index < sampleArray.length; index++){
+    kata14.append((sampleArray[index] * sampleArray[index]) + ' ')
+}
       
 
 
@@ -227,42 +227,40 @@ kataList.append(kata14)
 
 let kata15 = document.createElement('div')
 let kataFifteenHeading = document.createElement('h3')
-kataFifteenHeading.append('kata 15')
+kataFifteenHeading.append('Kata 15')
 kata15.append(kataFifteenHeading)
 kataList.append(kata15)
 let result15 = 0
-for(let index = 1; index<= 20; index ++) {
+for(let index = 1; index <= 20; index++){
     result15 += index
 }
 kata15.append(result15)
-
 
 // KATA 16
 
 let kata16 = document.createElement('div')
 let kataSixteenHeading = document.createElement('h3')
-kataSixteenHeading.append('kata 16')
+kataSixteenHeading.append('Kata 16')
 kata16.append(kataSixteenHeading)
 kataList.append(kata16)
-let result16 = 0
- for(let index = 0 ; index < sampleArray.length; index ++) {
-     result16 += sampleArray[index]
- }
- kata16.append(result16)
 
+let result16 = 0
+for(let index = 0; index < sampleArray.length; index++){
+    result16 += sampleArray[index]
+}
+kata16.append(result16)
 
  // KATA 17
 
  let kata17 = document.createElement('div')
  let kataSeventeenHeading = document.createElement('h3')
- kataSeventeenHeading.append('kata 17')
+ kataSeventeenHeading.append('Kata 17')
  kata17.append(kataSeventeenHeading)
  kataList.append(kata17)
-
-
+ 
  let smallestElement = sampleArray[0]
- for(let index = 0; index < sampleArray.length; index++) {
-     if(smallestElement > sampleArray[index]) {
+ for(let index = 0; index < sampleArray.length; index++){
+     if(smallestElement > sampleArray[index]){
          smallestElement = sampleArray[index]
      }
  }
@@ -272,20 +270,18 @@ let result16 = 0
 
  // KATA 18
 
- 
-let kata18 = document.createElement('div')
-let kataEighteenHeading = document.createElement('h3')
-kataSixteenHeading.append('kata 18')
-kata18.append(kataEighteenHeading)
-kataList.append(kata18)
-
-let largestElement = sampleArray[0]
-for(let index = 0; index < sampleArray.length; index++) {
-    if(largestElement < sampleArray[index]) {
-        largestElement = sampleArray[index]
-    }
-}
-kata18.append(largestElement)
+ let kata18 = document.createElement('div')
+ let kataEighteenHeading = document.createElement('h3')
+ kataEighteenHeading.append('Kata 18')
+ kata18.append(kataEighteenHeading)
+ kataList.append(kata18)
+ let largestElement = sampleArray[0]
+ for(let index = 0; index < sampleArray.length; index++){
+     if(largestElement < sampleArray[index]){
+         largestElement = sampleArray[index]
+     }
+ }
+ kata18.append(largestElement)
 
 
 
